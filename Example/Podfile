@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LeXiang_Example' do
+  pod 'LeXiang', :path => '../'
+
+  target 'LeXiang_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end
