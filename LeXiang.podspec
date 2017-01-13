@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'LeXiang'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of LeXiang.'
+  s.summary          = 'Le Xiang Game'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,26 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+	Le xiang sdk of game
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/LeXiang'
+  s.homepage         = 'https://github.com/Joshua-Song/LeXiang'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Joshua' => '250970213@qq.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/LeXiang.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Joshua-Song/LeXiang.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.requires_arc = true
 
-  s.source_files = 'LeXiang/Classes/**/*'
+  s.source_files = 'LeXiang/*.h'
   
-  # s.resource_bundles = {
-  #   'LeXiang' => ['LeXiang/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'LeXiang' => ['LeXiang/Assets/*.png']
+  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'LeXiang/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking'
 end
